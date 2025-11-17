@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #ff69b4, #8a2be2);
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  width: 300px;
+  margin-top: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0.2em 0;
+}
+
+.btn-wsp {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.6em 1em;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-add {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.6em 1em;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu {
+  padding: 2em 1em;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+.drink-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.drink-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1em;
+  border-radius: 10px;
+  width: 110px;
+}
+
+.drink-card .emoji {
+  font-size: 2em;
+}
+
+footer {
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.price {
+  font-weight: bold;
+  margin: 0.3em 0;
+  color: #000000; /* dorado para destacar */
+}
+
+/* 🛒 Carrito flotante */
+.cart-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.cart-toggle {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.cart-content {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 0.5em;
+  width: 280px;
+  text-align: left;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.cart-total {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+/* 🌟 Sección combos destacada */
+.combo-section {
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+  padding: 1.5em;
+  border-radius: 12px;
+  margin-bottom: 2em;
+  color: #fff;
+}
+
+.combo-section h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* 🎠 Carrusel para combos */
+.combo-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1em;
+  padding: 1em 0;
+  scroll-snap-type: x mandatory;
+}
+
+.combo-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.combo-carousel::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  border-radius: 4px;
+}
+
+.combo-carousel .drink-card {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: 100px;
+  padding: 0.8em;
+  font-size: 0.9em;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Borde degradado animado */
+.combo-carousel .drink-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(270deg, #00ffea, #ff00ff, #ffd700, #00ffea);
+  background-size: 600% 600%;
+  border-radius: 12px;
+  z-index: -1;
+  animation: borderFlow 6s linear infinite;
+}
+
+/* Animación del borde */
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Emojis de combos con rebote */
+.combo-carousel .emoji {
+  font-size: 1.5em;
+  display: inline-block;
+  animation: bounceEmoji 2s infinite;
+}
+
+/* Rebote */
+@keyframes bounceEmoji {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

@@ -1,0 +1,73 @@
+export const drinks = [
+  { name: "Gancia batido", category: "Clásicos", emoji: "🍋", price: 6500 },
+  { name: "Fernet", category: "Clásicos", emoji: "🥤", price: 7500 },
+  { name: "Gin tónica", category: "Clásicos", emoji: "🍸", price: 6500 },
+  { name: "Daiquiri frozen", category: "Clásicos", emoji: "🍓", price: 6500 },
+  { name: "Pitufo", category: "Clásicos", emoji: "💙", price: 6500 },
+  { name: "Pantera rosa", category: "Clásicos", emoji: "🌸", price: 6500 },
+  { name: "Mojito", category: "Clásicos", emoji: "🌿", price: 6500 },
+  { name: "Sex on the beach", category: "Clásicos", emoji: "🍑", price: 6500 },
+
+  { name: "Serenito", category: "Especiales", emoji: "🍫", price: 7000 },
+  { name: "Bomba oreo", category: "Especiales", emoji: "🍪", price: 7000 },
+  { name: "Oso yogui", category: "Especiales", emoji: "🐻", price: 7000 },
+  { name: "Chocotorta", category: "Especiales", emoji: "🍰", price: 7000 },
+  {
+    name: "Gin de frutos rojos",
+    category: "Especiales",
+    emoji: "🍓",
+    price: 0,
+  },
+  { name: "Daiquiri con crema", category: "Especiales", emoji: "🍒", price: 0 },
+  { name: "Cadbury frutilla", category: "Especiales", emoji: "🍓", price: 0 },
+  { name: "Crazy pop", category: "Especiales", emoji: "🍭", price: 0 },
+  { name: "Caipi frutal", category: "Especiales", emoji: "🍹", price: 0 },
+
+  { name: "Bichota", category: "De la Casa", emoji: "👑", price: 7500 },
+  { name: "Infiel", category: "De la Casa", emoji: "💔", price: 7500 },
+  { name: "Bandida", category: "De la Casa", emoji: "🦊", price: 7500 },
+  { name: "Tropichicas", category: "De la Casa", emoji: "💖", price: 7500 },
+
+  {
+    name: "Gancia batido + Pizza",
+    category: "Combos",
+    emoji: "🌿",
+    price: 15000,
+  },
+  {
+    name: "Gin tonic + Pizza",
+    category: "Combos",
+    emoji: "🍫",
+    price: 16000,
+  },
+  {
+    name: "Fernet + Pizza",
+    category: "Combos",
+    emoji: "🍕🍹",
+    price: 17000,
+  },
+  {
+    name: "2 Gancia batido + 2 Muzza",
+    category: "Combos",
+    emoji: "🍕🍹🍹",
+    price: 29000,
+  },
+  {
+    name: "2 Gin tonic + 2 Muzza",
+    category: "Combos",
+    emoji: "🍕🍹",
+    price: 31000,
+  },
+  {
+    name: "2 Fernet + 2 Muzza",
+    category: "Combos",
+    emoji: "🍕🍹🍹",
+    price: 33000,
+  },
+  {
+    name: "Trago a eleccion + picada",
+    category: "Combos",
+    emoji: "🍕🍹",
+    price: 13000,
+  },
+];
