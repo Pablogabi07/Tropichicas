@@ -7,8 +7,13 @@ const Footer = () => (
       href="https://www.instagram.com/tropi.chicas?igsh=YWw1eWY2b2p1YTRh"
       target="_blank"
       rel="noopener noreferrer"
+      className="instagram-link"
     >
-      Seguinos en Instagram
+      <img
+        src="/images/instagram3.webp" // 👉 acá ponés TU imagen (svg/png)
+        alt="Instagram"
+        className="instagram-icon"
+      />
     </a>
   </footer>
 );
