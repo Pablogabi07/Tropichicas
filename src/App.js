@@ -5,10 +5,6 @@ import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import "./index.css";
 
-// Importamos Analytics y track de Vercel
-import { Analytics } from "@vercel/analytics/react";
-import { track } from "@vercel/analytics";
-
 function App() {
   const [cart, setCart] = useState(() => {
     const saved = localStorage.getItem("tropichicas-cart");
@@ -30,35 +26,32 @@ function App() {
         return [...prev, { ...drink, qty: 1 }];
       }
     });
-
-    // 🔥 Registramos evento personalizado
-    track("add_to_cart", { drink: drink.name });
   };
 
   const removeFromCart = (name) => {
     setCart((prev) => prev.filter((d) => d.name !== name));
-
-    // 🔥 Registramos evento personalizado
-    track("remove_from_cart", { drink: name });
-  };
-
-  const handleWhatsAppClick = () => {
-    // 🔥 Registramos evento personalizado
-    track("whatsapp_click");
-    // acá iría tu lógica para abrir el link de WhatsApp
   };
 
   return (
     <>
+      {/* Fondo con hexágonos fluorescentes */}
+      <div className="hexagon-bg">
+        <div className="hexagon" style={{ left: "10%", animationDelay: "0s" }}></div>
+        <div className="hexagon" style={{ left: "20%", animationDelay: "2s" }}></div>
+        <div className="hexagon" style={{ left: "30%", animationDelay: "4s" }}></div>
+        <div className="hexagon" style={{ left: "40%", animationDelay: "6s" }}></div>
+        <div className="hexagon" style={{ left: "50%", animationDelay: "8s" }}></div>
+        <div className="hexagon" style={{ left: "60%", animationDelay: "10s" }}></div>
+        <div className="hexagon" style={{ left: "70%", animationDelay: "12s" }}></div>
+        <div className="hexagon" style={{ left: "80%", animationDelay: "14s" }}></div>
+      </div>
+
       <Header />
       <DrinkList addToCart={addToCart} />
       <Cart cart={cart} removeFromCart={removeFromCart} />
-      <Footer onWhatsAppClick={handleWhatsAppClick} />
-      {/* Activamos métricas de Vercel */}
-      <Analytics />
+      <Footer />
     </>
   );
 }
 
 export default App;
-
