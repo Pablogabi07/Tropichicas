@@ -3,12 +3,7 @@ import DrinkCard from "./DrinkCard";
 import { drinks } from "../data/drinks";
 
 const DrinkList = ({ addToCart }) => {
-  const categories = [
-    "Combos",
-    "Clásicos",
-    "Especiales",
-    "De la Casa",
-  ];
+  const categories = ["Combos", "Clásicos", "Especiales", "De la Casa"];
 
   return (
     <section className="menu">
@@ -20,7 +15,6 @@ const DrinkList = ({ addToCart }) => {
             {cat} {cat === "Combos" && "🎉"}
           </h3>
 
-          {/* 👇 Si es Combos, usamos carrusel */}
           {cat === "Combos" ? (
             <div className="combo-carousel">
               {drinks
@@ -29,8 +23,9 @@ const DrinkList = ({ addToCart }) => {
                   <DrinkCard
                     key={d.name}
                     name={d.name}
-                    emoji={d.emoji}
                     price={d.price}
+                    image={d.image}
+                    emoji={d.emoji}
                     addToCart={addToCart}
                   />
                 ))}
@@ -43,8 +38,9 @@ const DrinkList = ({ addToCart }) => {
                   <DrinkCard
                     key={d.name}
                     name={d.name}
-                    emoji={d.emoji}
                     price={d.price}
+                    image={d.image}
+                    emoji={d.emoji}
                     addToCart={addToCart}
                   />
                 ))}
