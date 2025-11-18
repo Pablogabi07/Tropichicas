@@ -7,7 +7,7 @@ export const drinks = [
   { name: "Pantera rosa", category: "Clásicos", emoji: "🌸", price: 6500 },
   { name: "Mojito", category: "Clásicos", emoji: "🌿", price: 6500 },
   { name: "Sex on the beach", category: "Clásicos", emoji: "🍑", price: 6500 },
-  { name: "Tekilazo", category: "Clásicos", emoji: "🥃🍋🧂", price: 6500 },
+  { name: "Tekilazo", category: "Clásicos", emoji: "🥃🍋🧂", price: 1000 },
 
   { name: "Serenito", category: "Especiales", emoji: "🍫", price: 7000 },
   { name: "Bomba oreo", category: "Especiales", emoji: "🍪", price: 7000 },
@@ -24,7 +24,7 @@ export const drinks = [
   { name: "Crazy pop", category: "Especiales", emoji: "🍭", price: 7000 },
   { name: "Caipi frutal", category: "Especiales", emoji: "🍹", price: 7000 },
   { name: "Rasta", category: "Especiales", emoji: "🍪", price: 7000 },
-  { name: "Qlona", category: "Especiales", emoji: "🍑", price: 7000 },
+  { name: "Qlona", category: "Especiales", emoji: "🍑", price: 7500 },
 
   { name: "Bichota", category: "De la Casa", emoji: "👑", price: 7500 },
   { name: "Infiel", category: "De la Casa", emoji: "💔", price: 7500 },
@@ -74,4 +74,5 @@ export const drinks = [
     price: 13000,
   },
 ];
+
 
