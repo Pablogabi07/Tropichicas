@@ -112,6 +112,11 @@ h3 {
   padding: 1em;
   border-radius: 10px;
   width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffea, 0 0 30px #ffd700;
 }
 
 .drink-card .emoji {
