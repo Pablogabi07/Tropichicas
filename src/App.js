@@ -5,6 +5,9 @@ import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import "./index.css";
 
+// Importamos Analytics de Vercel
+import { Analytics } from "@vercel/analytics/react";
+
 function App() {
   const [cart, setCart] = useState(() => {
     const saved = localStorage.getItem("tropichicas-cart");
@@ -38,8 +41,11 @@ function App() {
       <DrinkList addToCart={addToCart} />
       <Cart cart={cart} removeFromCart={removeFromCart} />
       <Footer />
+      {/* Activamos métricas de Vercel */}
+      <Analytics />
     </>
   );
 }
 
 export default App;
+
