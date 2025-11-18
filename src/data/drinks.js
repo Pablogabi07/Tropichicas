@@ -49,6 +49,12 @@ export const drinks = [
     price: 7000,
     image: "/images/serenito.jpeg",
   },
+    {
+    name: "Rasta",
+    category: "Especiales",
+    price: 7500,
+    image: "/images/rasta.jpeg",
+  },
   {
     name: "Bomba oreo",
     category: "Especiales",
@@ -64,7 +70,7 @@ export const drinks = [
   {
     name: "Chocotorta",
     category: "Especiales",
-    price: 7000,
+    price: 7500,
     image: "/images/chocotorta.jpeg",
   },
   {
@@ -136,3 +142,4 @@ export const drinks = [
     price: 13000,
   },
 ];
+
