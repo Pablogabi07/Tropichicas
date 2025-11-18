@@ -8,7 +8,6 @@ const DrinkList = ({ addToCart }) => {
     "Clásicos",
     "Especiales",
     "De la Casa",
-    "Promos",
   ];
 
   return (
@@ -58,3 +57,4 @@ const DrinkList = ({ addToCart }) => {
 };
 
 export default DrinkList;
+
