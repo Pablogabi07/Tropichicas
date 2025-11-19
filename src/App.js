@@ -15,6 +15,21 @@ function App() {
     localStorage.setItem("tropichicas-cart", JSON.stringify(cart));
   }, [cart]);
 
+  // 🧠 Google Analytics setup
+  useEffect(() => {
+    const scriptTag = document.createElement("script");
+    scriptTag.async = true;
+    scriptTag.src = "https://www.googletagmanager.com/gtag/js?id=G-RKV0P94HGC";
+    document.head.appendChild(scriptTag);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-RKV0P94HGC");
+  }, []);
+
   const addToCart = (drink) => {
     setCart((prev) => {
       const found = prev.find((d) => d.name === drink.name);
@@ -55,3 +70,4 @@ function App() {
 }
 
 export default App;
+
